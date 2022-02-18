@@ -3,8 +3,33 @@ Official implementation for paper "[Relational Surrogate Loss Learning](https://
 
 By Tao Huang, Zekang Li, Hua Lu, Yong Shan, Shusheng Yang, Yang Feng, Fei Wang, Shan You, Chang Xu.
 
-## Updates
-The code is coming soon.
+---
+## Usage
+### Install ReLoss
+```shell
+pip install git+https://github.com/hunto/ReLoss.git
+```
+Or install for development:
+```shell
+git clone https://github.com/hunto/ReLoss
+cd ReLoss
+pip install -e .
+```
+
+### Training with ReLoss
+All the inputs and outputs of ReLoss are the same as the original loss.
+* classification
+    ```python
+    from reloss.cls import ReLoss
+    loss_fn = ReLoss()
+    ```
+* human pose estimation
+    ```python
+    from reloss.pose import ReLoss
+    loss_fn = ReLoss(heatmap_size=(64, 48))
+    ```
+
+---
 
 ## Citation
 ```
