@@ -10,7 +10,7 @@
 |Method|Backbone|Input size|AP|Config|
 |:--:|:--:|:--:|:--:|:--:|
 |DARK|HRNet-W48|384 x 288|76.2|[mmpose](https://github.com/open-mmlab/mmpose/blob/master/configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/coco/hrnet_w48_coco_384x288_dark.py)|
-|DARK + ReLoss|HRNet-W48|384 x 288|76.2|-|
+|DARK + ReLoss|HRNet-W48|384 x 288|76.4|-|
 
 ---
 
