@@ -13,9 +13,9 @@ from fairseq import optim
 from torch.hub import load_state_dict_from_url
 
 
-class DNNLoss(nn.Module):
+class ReLoss(nn.Module):
     def __init__(self, args, vocab_size, padding_idx, fn=nn.ELU, pretrained=True):
-        super(DNNLoss, self).__init__()
+        super(ReLoss, self).__init__()
         self.logits_layer = nn.Sequential(
             nn.Linear(1, args.decoder_embed_dim),
             fn(),
