@@ -28,6 +28,8 @@ All the inputs and outputs of ReLoss are the same as the original loss.
     from reloss.pose import ReLoss
     loss_fn = ReLoss(heatmap_size=(64, 48))
     ```
+* non-autoregressive neural machine translation
+    The loss should be used in fairseq framework. You can add it into the criterions.
 
 ---
 
