@@ -3,7 +3,6 @@ Official implementation for paper "[Relational Surrogate Loss Learning](https://
 
 By Tao Huang, Zekang Li, Hua Lu, Yong Shan, Shusheng Yang, Yang Feng, Fei Wang, Shan You, Chang Xu.
 
----
 ## Usage
 ### Install ReLoss
 ```shell
@@ -16,7 +15,7 @@ cd ReLoss
 pip install -e .
 ```
 
-### Training with ReLoss
+### Train models with ReLoss
 All the inputs and outputs of ReLoss are the same as the original loss.
 * classification
     ```python
@@ -32,7 +31,10 @@ All the inputs and outputs of ReLoss are the same as the original loss.
 
     The loss should be used in fairseq framework. You can add it into the criterions.
 
----
+### Train ReLoss
+
+You can train your own ReLoss, please see [example/train_reloss/README.md](example/train_reloss/README.md) for instructions.
+
 
 ## Citation
 ```
