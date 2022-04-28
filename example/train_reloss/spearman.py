@@ -11,6 +11,7 @@ def diffsort_rank(x):
         sorter = DiffSortNet('bitonic',
                              x.shape[1],
                              steepness=5,
+                             interpolation_type='logistic_phi',
                              device=x.device)
         sorter_shape = x.shape[1]
 
