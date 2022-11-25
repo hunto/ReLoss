@@ -32,8 +32,6 @@ def train_epoch(train_loader, loss_module, optimizer):
         penalty = []
         for logits, targets in zip(logits_batch, targets_batch):
             # calculate loss and metric for each batch
-            logits = logits_batch[i]
-            targets = targets_batch[i]
             # augmentation - randomly modify a portion of targets
             targets = logits.max(dim=1)[1]
             correct_num = int(torch.rand(1).item() * targets.shape[0])
