@@ -50,7 +50,7 @@ def train_epoch(train_loader, loss_module, optimizer):
         losses = torch.stack(losses)
         metrics = torch.tensor(metrics, device=losses.device)
 
-        diff_spea = spearmanr(-losses.unsqueeze(0), metrics.unsqueeze(0))
+        diff_spea = spearman_diff(-losses.unsqueeze(0), metrics.unsqueeze(0))
         spea = spearman(-losses.unsqueeze(0).detach(),
                         metrics.unsqueeze(0).detach())
 
@@ -91,7 +91,7 @@ def val_epoch(val_loader, loss_module):
             ce_losses = torch.stack(ce_losses)
             metrics = torch.tensor(metrics, device=losses.device)
 
-            diff_spea = spearmanr(-losses.unsqueeze(0),
+            diff_spea = spearman_diff(-losses.unsqueeze(0),
                                   metrics.unsqueeze(0)).item()
             spea = spearman(-losses.unsqueeze(0), metrics.unsqueeze(0)).item()
             ce_spea = spearman(-ce_losses.unsqueeze(0),
